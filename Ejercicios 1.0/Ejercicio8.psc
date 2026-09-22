@@ -1,6 +1,6 @@
 Algoritmo Ejercicio8
 	Definir mes Como Caracter;
-	Definir importe, descuento, total Como Real;
+	Definir importe Como Real;
 	
 	Escribir "Introduce el mes de la compra:";
 	Leer mes;
@@ -8,14 +8,10 @@ Algoritmo Ejercicio8
 	Escribir "Introduce el importe de la compra:";
 	Leer importe;
 	
-	Si mes = "octubre" Entonces
-		descuento <- importe * 0.15;
-		total <- importe - descuento;
+	Si (Minusculas((mes)) == "octubre") Entonces
+		Escribir "Aplicamos el descuento, el importe a pagar es " importe * 0.85 " euros";
 	SiNo
-		total <- importe;
+		Escribir "No se aplica descuento, el importe es " importe;
 	FinSi
-	
-	Escribir "La cantidad que debe pagar el cliente es: ", total, " euros";
-	
 	
 FinAlgoritmo
